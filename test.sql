@@ -11,7 +11,7 @@
  Target Server Version : 50716
  File Encoding         : 65001
 
- Date: 11/04/2019 11:24:43
+ Date: 19/04/2019 18:46:35
 */
 
 SET NAMES utf8mb4;
@@ -22,17 +22,18 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`  (
-  `age` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `id` int(11) NOT NULL,
+  `password` char(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 38 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (11, 'aaa', 1);
-INSERT INTO `user` VALUES (22, 'bbb', 2);
-INSERT INTO `user` VALUES (33, ' ccc', 3);
+INSERT INTO `user` VALUES (1, 'aaa', '11');
+INSERT INTO `user` VALUES (2, 'bbb', '22');
+INSERT INTO `user` VALUES (3, ' ccc', '33');
+INSERT INTO `user` VALUES (37, 'test', '123456');
 
 SET FOREIGN_KEY_CHECKS = 1;
